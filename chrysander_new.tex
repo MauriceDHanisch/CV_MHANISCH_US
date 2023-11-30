@@ -1,0 +1,243 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{comment}
+\usepackage{ragged2e}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usepackage{calc}
+\usepackage[super]{nth}
+\newcommand*{\ClipSep}{0.4cm}%
+\usetikzlibrary{calc} 
+\usepackage[absolute,overlay]{textpos}
+\usepackage[
+top    =3.3cm,
+bottom = 2cm,
+left   = 1.9cm,
+right  = 1.9cm]{geometry}
+
+\usepackage{multicol}
+\usepackage{import}
+
+% personal data
+\name{Maurice D.}{Hanisch}
+\address{Gubelstrasse 44}{Zurich}{Switzerland}% optional, remove / comment the line if not 
+  
+\newcommand*{\customcventry}[5][.5em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     { #3}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape\small #4}
+  \end{tabular}
+  \ifx&#5&%
+  \else{\\%
+    \begin{minipage}{0.82\maincolumnwidth}%
+      \small#5%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     { #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{0.82\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+  
+\newcommand*{\custompublication}[2][0.6em]{
+    \begin{minipage}{\maincolumnwidth}%
+       #2%
+    \end{minipage}
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{12pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\begin{textblock*}{14cm}(3.7cm,1.5cm) % {block width} (coords) 
+    \makecvtitle
+\end{textblock*}
+\begin{textblock*}{15cm}(2.8cm,2.5cm)
+\begin{center}
+\begin{tabular}{ c c }
+ \faEnvelope\enspace mhaniscn@student.ethz.ch  & \faMobile\enspace \quad +41 763 61 91 83 \\
+\end{tabular}
+\end{center}
+\end{textblock*}
+\begin{textblock*}{15cm}(2.8cm,2.9cm)
+\begin{center}
+\begin{tabular}{ c c }
+ \faLinkedin\enspace \href{https://www.linkedin.com/in/mauricehanisch/}{\underline{www.linkedin.com/in/mauricehanisch/}} & \faGithub\enspace\href{https://github.com/MauriceDHanisch/}{\underline{www.github.com/MauriceDHanisch/}}\\
+\end{tabular}
+\end{center}
+\end{textblock*}
+
+\vspace*{0mm}
+
+\section{Education}
+\customcventry{M.Sc. Physics}{09/2022 -- Present}{ETH Zurich, Switzerland}
+{\begin{itemize}
+    \item Current GPA: 5.61/6.00 (CH)
+    \item Focus: Q. Error Correction, Q. Information Processing, Machine Learning
+    \item Selected past \& current coursework: Advanced Q. Algorithms, Probabilistic Artificial Intelligence, Q. Error Correction, Q. Information Processing 1 \& 2, Trapped Ions.
+\end{itemize}
+}
+\vspace{-0.1cm}
+{\textit{| Partly financed by the \underline{Rayer scholarship} | Dr. Mas-Fraissinet, France.}}
+\vspace{0.3cm}
+
+\customcventry{B.Sc. Physics}{10/2018 -- 09/2022}{LMU Munich, Germany}
+{\begin{itemize}
+  \item GPA: 1.28/1.00 (DE). Theoretical physics electives.
+\end{itemize}
+}
+\vspace{-0.1cm}
+{\textit{| Mainly financed by the \underline{Rayer scholarship} | Dr. Mas-Fraissinet, France.}}
+\vspace{0.3cm}
+
+\customcventry{Medical Degree}{10/2017 -- 02/2018}{LMU Munich, Germany}
+{\begin{itemize}
+  \item GPA: N/A. Not completed.
+\end{itemize}
+}
+
+\customcventry{Baccalauréat}{09/2014 -- 07/2017}{Lycée Sud des Landes, St-Vincent-de-Tyrosse, France}
+{\begin{itemize}
+    \item GPA 16.00/20.00 (FR). Graduated with the highest possible honors at the age of 16.
+\end{itemize}
+}
+
+\section{Research Experience}
+\customcventry{Master's Thesis}{09/2023 -- Present}{IBM Quantum, Zurich, Switzerland}
+{\begin{itemize}
+  \item 
+  \item 
+  \item 
+  \item Supervisors: Dr. James Wootton, Dr. Joseph Renes
+\end{itemize}
+}
+
+\customcventry{Semester Project}{08/2022 -- 10/2022}{ETH Zurich, Switzerland}
+% {\scriptsize \href{https://ethz.ch/content/dam/ethz/special-interest/phys/quantum-electronics/tiqi-dam/documents/semester_theses/smesterthesis_Maurice_Hanisch}{\underline{\faLink ~Report Link}}}
+% \vspace{-0.1cm}
+{\begin{itemize}
+    \item “Towards a tunable beamsplitter interaction between two GKP-encoded qubits”
+    \item Experimental project on the motional interaction of GKP-encoded qubits in trapped ions.
+    \item Designing and simulation of trapping potentials and then experimental testing of the found potentials.
+    \item Skills: Python, Hardware: ion trapping. 
+    \item Supervisor: Prof. Jonathan Home    
+\end{itemize}}
+\vspace{0.2 cm}
+
+\customcventry{Bachelor's Thesis}{04/2022 -- 09/2022}{Max-Planck-Institute for Quantum Optics, Munich, Germany}
+{\begin{itemize}
+    \item “Space-efficient quantum computation of fermionic and bosonic Gaussian systems”
+    \item Introduction to various theoretical research areas (entanglement simulation with Python, entropic uncertainty principles, tensor networks) by Dr. Adrian Rubio.
+    \item Investigating the computational advantages in terms of time and space of fermionic and bosonic Gaussian circuits.
+    \item
+    \item Supervisors: Prof. Ignacio Cirac, Dr. Adrian Rubio.
+\end{itemize}}
+
+\section{Teaching}
+\customcventry{Teaching Assistant in Analysis I}{09/2023 -- Present}{ETH Zürich, Zurich, Switzerland}
+{\begin{itemize}
+  \item Teaching calculus for over 60 \nth{1} year mechanical engineering students
+  \item Lecturer: Dr. Andreas Steiger, Dr. Fabian Ziltener
+\end{itemize}
+}
+
+\customcventry{Student Assistant in Experimental Methods for Engineers}{09/2021 -- 01/2022}{ETH Zürich, Zurich, Switzerland}
+{\begin{itemize}
+    \item Taught basics of particle imaging velocimetry (PIV) \& tracking velocimetry (PTV) data collection and processings
+\end{itemize}
+}
+
+\customcventry{Teaching Assistant in Physics III}{09/2020 -- 12/2020}{ETH Zürich, Zurich, Switzerland}
+{\begin{itemize}
+    \item Taught the basics of quantum mechanics in a weekly in-person class for 25 \nth{2} year B.Sc. Physics students with remote students over Zoom
+    \item Lecturer: Prof. Yiwen Chu
+\end{itemize}}
+
+\section{Work Experience}
+
+
+\section{Competitions}
+\customcventry{Quandela LOQCathon 2.0}{11/2023}{Sorbonne Université, Paris, France}
+{\begin{itemize}
+    \item Won 1st Prize of the competetion (3000€). Worked on Électricité de France (EDF) challenge on quantum reservoir computing using Linear Optics for time series prediction
+\end{itemize}}
+\customcventry{Quantum Hackathon}{05/2023}{ETH Zürich, Zurich, Switzerland}
+{\begin{itemize}
+    \item Worked on Moody's Analytics challenge using quantum Monte Carlo simulations for option pricing
+\end{itemize}}
+
+
+\section{Extracurricular Acitivities}
+\customcventry{Hack4Good Organizer}{09/2023 -- Present}{Analytics Club ETH Zürich (ACE), Zurich, Switzerland}
+{\begin{itemize}
+  \item Project coordinator for the project provided by WWF on using LLMs for sentiment analysis
+  \item Organizing workshops on "Data science for NGOs" for the participants
+\end{itemize}
+}
+
+\customcventry{Board Member $|$ Studies}{03/2023 -- Present}{Quantum Engineering Commission (QEC), Zurich, Switzerland}
+{\begin{itemize}
+    \item Responsible for the Quantum Engineering MSc mentoring program, Alumni \& internship statistics as well as study documents
+    \item Built a pipeline for automated exam protocol \& course review creation using Python, Google API, and LaTeX
+\end{itemize}}
+
+\customcventry{Student Mentor}{09/2021 -- 02/2022}{ETH Physics Department Student Mentoring}
+{\begin{itemize}
+    \item Mentor for a group of three first-year BSc students including regular meetings to discuss their study progress
+\end{itemize}}
+
+\section{Technical Skills and Interests}
+% TO DO: Python libraries aufzählen
+\textbf{Technical:} Python, MATLAB, C++, LTspice, LaTeX, MS Office, Autodesk Fusion 360, ANSYS Maxwell  
+\\
+\textbf{Languages:} German (native), English (C1), French (B2)
+\\
+\textbf{Interests:} Calisthenics, Glider flying (AFG Zürich), Bouldering, Swimming, Cycling
+
+
+
+
+\end{document}
+
+
+
+
+
