@@ -36,6 +36,7 @@ right  = 1.9cm]{geometry}
 
 \usepackage{multicol}
 \usepackage{import}
+\usepackage{xcolor}
 
 % personal data
 \name{Maurice D.}{Hanisch}
@@ -80,6 +81,8 @@ right  = 1.9cm]{geometry}
        #2%
     \end{minipage}
   \par\addvspace{#1}}
+
+\newcommand{\blackitem}{\item[\large\color{black}\textbullet]}
 
 \setlength{\tabcolsep}{12pt}
 
@@ -156,9 +159,7 @@ right  = 1.9cm]{geometry}
   \item \underline{``Quantum error correction with analog measurement information decoders.''}
   \item Writing soft information decoders in C\texttt{++} \& Python. Analyse performance on real hardware.
   \item Future work:  Analyzing performance-information trade-off of soft-information decoders. Working on decoders for ArcCircuits. 
-  \vspace*{0.15cm}
-  \item Skills: C\texttt{++}
-, Python, IBM Quantum hardware.
+  \item Skills: C\texttt{++}, Python, IBM Quantum hardware.
   \item Supervisors: Dr. James Wootton, Dr. Joseph Renes, Prof. Renato Renner.
 \end{itemize}}
 
@@ -170,7 +171,6 @@ right  = 1.9cm]{geometry}
     \item \underline{``Towards a tunable beamsplitter interaction between two GKP-encoded qubits.''}
     \item Experimental project on the motional interaction of GKP-encoded qubits in trapped ions.
     \item Designed and simulated trapping potentials and experimental testing of the found potentials.
-    \vspace*{0.15cm}
     \item Skills: Python, ion trapping hardware. 
     \item Supervisor: Dr. Stephan Welte, Moritz Fontbot\'e-Schmidt, Prof. Jonathan Home.
 \end{itemize}}
@@ -184,7 +184,6 @@ right  = 1.9cm]{geometry}
     \item \underline{``Space-efficient quantum computation of fermionic and bosonic Gaussian systems.''}
     \item Introduction to various theoretical research areas (entanglement simulation with Python, entropic uncertainty principles, tensor networks) by Dr. Adrian Rubio.
     \item Investigated the time and space complexity of fermionic and bosonic Gaussian circuits.
-    \vspace*{0.15cm}
     \item Skills: Python, complexity theory, bosonic quantum computation.
     \item Supervisors: Dr. Adrian Rubio, Prof. Ignacio Cirac.
 \end{itemize}}
@@ -269,7 +268,7 @@ right  = 1.9cm]{geometry}
 %%%%%%%%%% EXTRACURRICULAR %%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Extracurricular Acitivities}
+\section{Extracurricular Activities}
 
 \customcventry{Student Mentor}{09/2023 -- 02/2024}{ETH Physics Department Student Mentoring}
 {\begin{itemize}
