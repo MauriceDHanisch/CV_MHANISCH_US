@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[10pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % modern themes
 \moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -30,7 +30,7 @@
 \usepackage[absolute,overlay]{textpos}
 \usepackage[
 top    = 3.3cm,
-bottom = 2cm,
+bottom = 1.5cm,
 left   = 1.9cm,
 right  = 1.9cm]{geometry}
 
@@ -93,14 +93,14 @@ right  = 1.9cm]{geometry}
 \begin{textblock*}{14cm}(3.7cm,1.5cm) % {block width} (coords) 
     \makecvtitle
 \end{textblock*}
-\begin{textblock*}{15cm}(2.8cm,2.5cm)
+\begin{textblock*}{15cm}(2.4cm,2.5cm)
 \begin{center}
 \begin{tabular}{ c c }
- \faEnvelope\enspace mhanisc@student.ethz.ch ~~ & \faMobile\enspace \quad +41 763 61 91 83 \\
+ \faEnvelope\enspace mhanisc@student.ethz.ch ~& \faMobile\enspace \quad +41 763 61 91 83 \\
 \end{tabular}
 \end{center}
 \end{textblock*}
-\begin{textblock*}{15cm}(2.8cm,2.9cm)
+\begin{textblock*}{15cm}(2.8cm,2.95cm)
 \begin{center}
 \begin{tabular}{ c c }
  \faLinkedin\enspace \href{https://www.linkedin.com/in/mauricehanisch/}{\underline{www.linkedin.com/in/mauricehanisch/}} & \faGithub\enspace\href{https://github.com/MauriceDHanisch/}{\underline{www.github.com/MauriceDHanisch/}}\\
@@ -138,11 +138,12 @@ right  = 1.9cm]{geometry}
 \end{itemize}
 }
 
-\customcventry{Baccalauréat}{09/2014 -- 07/2017}{Lycée Sud des Landes, St-Vincent-de-Tyrosse, France}
-{\begin{itemize}
-    \item GPA 16.00/20.00 (FR). Graduated with the highest possible honors at the age of 16.
-\end{itemize}
-}
+% \customcventry{Baccalauréat}{09/2014 -- 07/2017}{Lycée Sud des Landes, St-Vincent-de-Tyrosse, France}
+% {\begin{itemize}
+%     % \item GPA 16.00/20.00 (FR). Graduated with the highest possible honors at the age of 16.
+%     \item GPA 16.00/20.00 (FR). Graduated with \textit{mention tr\`es bien}, the highest distinction at the age of 16.
+% \end{itemize}
+% }
 
 
 
@@ -172,10 +173,11 @@ right  = 1.9cm]{geometry}
     \item Experimental project on the motional interaction of GKP-encoded qubits in trapped ions.
     \item Designed and simulated trapping potentials and experimental testing of the found potentials.
     \item Skills: Python, ion trapping hardware. 
-    \item Supervisor: Moritz Fontbot\'e-Schmidt, Martin Wagener, Dr. Stephan Welte, Prof. Jonathan Home.
+    % \item Supervisor: Moritz Fontbot\'e-Schmidt, Martin Wagener, Dr. Stephan Welte, Prof. Jonathan Home.
+    \item Supervisor: Moritz Fontbot\'e-Schmidt, Prof. Jonathan Home.
 \end{itemize}}
 
-\newpage
+% \newpage
 
 \customcventry{Bachelor's Thesis}{04/2022 -- 09/2022}{Max-Planck-Institute for Quantum Optics, Munich, Germany}
 {\begin{itemize}
@@ -240,6 +242,17 @@ right  = 1.9cm]{geometry}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Competitions}
+
+\customcventry{ETH Quantum Hackathon}{05/2024}{ETH Zurich, Switzerland}
+{\begin{itemize}
+    \item[] \hspace*{-0.38cm}{\scriptsize \href{https://github.com/MauriceDHanisch/ethz_qhack_24}{\underline{\faGithub~Project Repo}}}
+    \vspace*{0.05cm}
+    \item Won \underline{\nth{1} Prize} of the NVIDIA challenge with my team.
+    \item Won overall \underline{\nth{1} Prize} for the best presentation competing against the other challenge winners.
+    \item Topic: Hardware-accelerated classical-quantum hybrid optimization algorithms for the Max-Cut problem.
+\end{itemize}}
+
+
 \customcventry{Quandela Hackathon: LOQCathon 2.0}{11/2023}{Sorbonne Université, Paris, France}
 {\begin{itemize}
     \item[] \hspace*{-0.38cm}{\scriptsize \href{https://github.com/MauriceDHanisch/LOQCathon_qReservoir}{\underline{\faGithub~Project Repo}}}
@@ -257,6 +270,8 @@ right  = 1.9cm]{geometry}
 
 \customcventry{ETH Quantum Hackathon}{05/2023}{ETH Zurich, Switzerland}
 {\begin{itemize}
+    \item[] \hspace*{-0.38cm}{\scriptsize \href{https://github.com/PaU1570/eth-qec-hackathon-2023}{\underline{\faGithub~Project Repo}}}
+    \vspace*{0.05cm}
     \item Won \underline{\nth{2} Prize} of the IQM challenge with my team.
     \item Topic: Using symmetry-informed quantum machine learning.
 \end{itemize}}
@@ -268,24 +283,24 @@ right  = 1.9cm]{geometry}
 %%%%%%%%%% EXTRACURRICULAR %%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Extracurricular Activities}
+% \section{Extracurricular Activities}
 
-\customcventry{Student Mentor}{09/2023 -- 02/2024}{ETH Physics Department Student Mentoring}
-{\begin{itemize}
-    \item Mentor for a group of seven first-year BSc students. Monthly meetings to discuss the student's progress and problems.
-\end{itemize}}
+% \customcventry{Student Mentor}{09/2023 -- 02/2024}{ETH Physics Department Student Mentoring}
+% {\begin{itemize}
+%     \item Mentor for a group of seven first-year BSc students. Monthly meetings to discuss the student's progress and problems.
+% \end{itemize}}
 
-\customcventry{Residence House Speaker}{10/2021 -- 09/2022}{Studentenwerk Munich, Germany}
-{\begin{itemize}
-  \item Coordinated administrative tasks for a 300-student residence house.
-  \item Organized student events; mediated disputes and conflicts; responsible for sensible issues.
-\end{itemize}}
+% \customcventry{Residence House Speaker}{10/2021 -- 09/2022}{Studentenwerk Munich, Germany}
+% {\begin{itemize}
+%   \item Coordinated administrative tasks for a 300-student residence house.
+%   \item Organized student events; mediated disputes and conflicts; responsible for sensible issues.
+% \end{itemize}}
 
-\customcventry{Student Mentor}{10/2021}{LMU Physics Department}
-{\begin{itemize}
-  \item Mentor 40 new LMU physics students to assist them in commencing their studies in the first months of their studies.
-\end{itemize}
-}
+% \customcventry{Student Mentor}{10/2021}{LMU Physics Department}
+% {\begin{itemize}
+%   \item Mentor 40 new LMU physics students to assist them in commencing their studies in the first months of their studies.
+% \end{itemize}
+% }
 
 
 
