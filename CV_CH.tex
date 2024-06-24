@@ -1,0 +1,354 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{comment}
+\usepackage{ragged2e}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+\usepackage{calc}
+\usepackage[super]{nth}
+\newcommand*{\ClipSep}{0.4cm}%
+\usetikzlibrary{calc} 
+\usepackage[absolute,overlay]{textpos}
+\usepackage[
+top    = 1.5cm,
+bottom = 1.5cm,
+left   = 1.9cm,
+right  = 1.9cm]{geometry}
+
+\usepackage{multicol}
+\usepackage{import}
+\usepackage{xcolor}
+
+% personal data
+\name{Maurice D.}{Hanisch}
+\address{Gubelstrasse 44}{Zurich}{Switzerland}% optional, remove / comment the line if not 
+  
+\newcommand*{\customcventry}[5][.5em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     { #3}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape\small #4}
+  \end{tabular}
+  \ifx&#5&%
+  \else{\\%
+    \begin{minipage}{0.82\maincolumnwidth}%
+      \small#5%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     { #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{0.82\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+  
+\newcommand*{\custompublication}[2][0.6em]{
+    \begin{minipage}{\maincolumnwidth}%
+       #2%
+    \end{minipage}
+  \par\addvspace{#1}}
+
+\newcommand{\blackitem}{\item[\large\color{black}\textbullet]}
+
+\setlength{\tabcolsep}{12pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+
+% personal data directly set
+\newcommand{\firstnamee}{Maurice D.}
+\newcommand{\familynamee}{Hanisch}
+\newcommand{\mytitle}{Resumé}
+\newcommand{\myaddress}{Gubelstrasse 44, Zurich, Switzerland}
+\newcommand{\mymobile}{+41 763 61 91 83}
+\newcommand{\myemail}{mhanisc@student.ethz.ch}
+\newcommand{\mylinkedin}{mauricehanisch}
+\newcommand{\mygithub}{MauriceDHanisch}
+\newcommand{\mybirthdate}{22.08.2000}
+
+\begin{document}
+\vspace*{-0.5cm} % Apply this right before your minipage
+% Custom title block
+\begin{minipage}[t]{0.6\textwidth}
+  \raggedright
+  {\hspace{-0.05cm}\fontsize{28}{40}\selectfont \bfseries \firstnamee~\familynamee}\\
+  \vspace{1em}    
+  {\hspace{-0.05cm}\small\faHome~\myaddress}\\
+  {\small\faMobile~\href{tel:\mymobile}{\mymobile}}\\
+  {\small\faEnvelope~\href{mailto:\myemail}{\myemail}}\\
+  \vspace{1em}
+  {\small\faLinkedin~\href{https://www.linkedin.com/in/\mylinkedin}{MauriceHanisch}}\\
+  {\small\faGithub~\href{https://github.com/\mygithub}{MauriceDHanisch}}\\
+
+  \vspace{1em}
+  {\small Birthdate: \mybirthdate}\\
+  {\small Nationality: German, French}
+\end{minipage}%
+\hfill
+% Picture block
+\begin{minipage}[t]{0.38\textwidth}
+  \raggedleft
+  \vspace{-\baselineskip} % Adjust vsertical space if necessary
+  \vspace{-1.2em}
+  \includegraphics[width=0.8\textwidth]{PFP_Croppeddd.png}
+\end{minipage}
+
+\section{Education}
+\customcventry{M.Sc. Physics}{09/2022 -- Present}{ETH Zurich, Switzerland}
+{\begin{itemize}
+    \item Current GPA: 5.77/6.00 (CH)
+    \item Focus: Q. Error Correction, Q. Information Processing, Machine Learning
+    \item Selected past \& current coursework: Advanced Q. Algorithms, Q. Error Correction, Q. Information Processing 1 \& 2, Probabilistic Artificial Intelligence, Introduction to Machine Learning.
+\end{itemize}
+}
+\vspace{-0.1cm}
+{\textit{| Partly financed by the \underline{Rayer scholarship} | Dr. Mas-Fraissinet, France.}}
+\vspace{0.3cm}
+
+\customcventry{B.Sc. Physics}{10/2018 -- 09/2022}{LMU Munich, Germany}
+{\begin{itemize}
+  \item GPA: 1.28/1.00 (DE).
+  \item Theoretical physics electives.
+\end{itemize}
+}
+\vspace{-0.1cm}
+{\textit{| Mainly financed by the \underline{Rayer scholarship} | Dr. Mas-Fraissinet, France.}}
+\vspace{0.3cm}
+
+\customcventry{Medical Degree}{10/2017 -- 02/2018}{LMU Munich, Germany}
+{\begin{itemize}
+  \item GPA: N/A. Not completed.
+\end{itemize}
+}
+
+% \customcventry{Baccalauréat}{09/2014 -- 07/2017}{Lycée Sud des Landes, St-Vincent-de-Tyrosse, France}
+% {\begin{itemize}
+%     % \item GPA 16.00/20.00 (FR). Graduated with the highest possible honors at the age of 16.
+%     \item GPA 16.00/20.00 (FR). Graduated with \textit{mention tr\`es bien}, the highest distinction at the age of 16.
+% \end{itemize}
+% }
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% RESEARCH EXPERIENCE %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Research Experience}
+\customcventry{Master's Thesis}{09/2023 -- Present}{IBM Quantum, Zurich, Switzerland}
+{\begin{itemize}
+  \item[] \hspace*{-0.38cm}{\scriptsize \href{https://github.com/quantumjim/soft_information_decoding}{\underline{\faGithub~Project Repo}}}
+  \vspace*{0.2cm}
+  \item \underline{``Quantum error correction with analog measurement information decoders.''}
+  \item Writing soft information decoders in C\texttt{++} \& Python. Analyzing performance on real hardware. Analyzing performance-information trade-off of soft-information decoders.
+  \item Skills: C\texttt{++}, Python, IBM Quantum hardware.
+  \item Supervisors: Dr. James Wootton, Dr. Joseph Renes, Prof. Renato Renner.
+  \item Grade: 6.00/6.00 (CH)
+\end{itemize}}
+
+\customcventry{Semester Project}{06/2023 -- 08/2022}{ETH Zurich, Switzerland}
+{\begin{itemize}
+    \item[] \hspace*{-0.38cm}{\scriptsize \href{https://ethz.ch/content/dam/ethz/special-interest/phys/quantum-electronics/tiqi-dam/documents/semester_theses/smesterthesis_Maurice_Hanisch}{\underline{\faLink~Report Link}}}
+    \vspace*{0.2cm}
+    \item \underline{``Towards a tunable beamsplitter interaction between two GKP-encoded qubits.''}
+    \item Experimental project on the motional interaction of GKP-encoded qubits in trapped ions.
+    \item Designed and simulated trapping potentials and experimental testing of the found potentials.
+    \item Skills: Python, ion trapping hardware. 
+    % \item Supervisor: Moritz Fontbot\'e-Schmidt, Martin Wagener, Dr. Stephan Welte, Prof. Jonathan Home.
+    \item Supervisor: Moritz Fontbot\'e-Schmidt, Prof. Jonathan Home.
+    \item Grade: 1.30/1.00 (DE)
+\end{itemize}}
+
+% \newpage
+
+\customcventry{Bachelor's Thesis}{04/2022 -- 09/2022}{Max-Planck-Institute for Quantum Optics, Munich, Germany}
+{\begin{itemize}
+    \item[] \hspace*{-0.38cm}{\scriptsize \href{https://pure.mpg.de/pubman/faces/ViewItemFullPage.jsp?itemId=item_3458224}{\underline{\faLink~Report Link}}}
+    \vspace*{0.2cm}
+    \item \underline{``Space-efficient quantum computation of fermionic and bosonic Gaussian systems.''}
+    \item Introduction to various theoretical research areas (entanglement simulation with Python, entropic uncertainty principles, tensor networks) by Dr. Adrian Rubio.
+    \item Investigated the time and space complexity of fermionic and bosonic Gaussian circuits.
+    \item Skills: Python, complexity theory, bosonic quantum computation.
+    \item Supervisors: Dr. Adrian Rubio, Prof. Ignacio Cirac.
+\end{itemize}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% TEACHING %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Teaching}
+\customcventry{Teaching Assistant in Linear Algebra I}{09/2023 -- Present}{ETH Zurich, Switzerland}
+{\begin{itemize}
+  \item Teached Linear Algebra for \nth{1} year B.Sc. CS students in a weekly in-person class.
+  \item Lecturer: Prof. Bernd Gärtner, Prof. Afonso Bandeira.
+\end{itemize}}
+
+\customcventry{Teaching Assistant in Physics II}{02/2023 -- 07/2023}{ETH Zurich, Switzerland}
+{\begin{itemize}
+  \item Teached Continuum Mechanics and Thermodynamics for \nth{1} year B.Sc. EE students in a weekly in-person class.
+  \item Lecturer: Prof. Atac Imamoglu.
+\end{itemize}}
+
+\customcventry{Laboratory Supervisor}{10/2021 -- 02/2022}{LMU Munich, Germany}
+{\begin{itemize}
+  \item Supervised the physics electrodynamic laboratory course for five groups of 20 medicine students.
+\end{itemize}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% WORK EXPERIENCE %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Work Experience}
+\customcventry{IP Law Intern}{04/2022}{Bardehle Pagenberg, Munich, Germany}
+{\begin{itemize}
+  \item Drafted argumentations for ongoing patent lawsuits. Familiarized with litigation examples. Supervisor: Sebastian H.-E. Müller.
+\end{itemize}}
+
+\customcventry{Assistance Coordinator}{02/2018 -- 10/2018}{IMA, Munich, Germany}
+{\begin{itemize}
+  \item Accident and breakdown assistance coordinator in regions including DE, CH, FR, and UK.
+\end{itemize}}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% COMPETITIONS %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Competitions}
+
+\customcventry{ETH Quantum Hackathon}{05/2024}{ETH Zurich, Switzerland}
+{\begin{itemize}
+    \item[] \hspace*{-0.38cm}{\scriptsize \href{https://github.com/MauriceDHanisch/ethz_qhack_24}{\underline{\faGithub~Project Repo}}}
+    \vspace*{0.05cm}
+    \item Won \underline{\nth{1} Prize} of the NVIDIA challenge with my team.
+    \item Won overall \underline{\nth{1} Prize} for the best presentation competing against the other challenge winners.
+    \item Topic: Hardware-accelerated classical-quantum hybrid optimization algorithms for the Max-Cut problem.
+\end{itemize}}
+
+
+\customcventry{Quandela Hackathon: LOQCathon 2.0}{11/2023}{Sorbonne Université, Paris, France}
+{\begin{itemize}
+    \item[] \hspace*{-0.38cm}{\scriptsize \href{https://github.com/MauriceDHanisch/LOQCathon_qReservoir}{\underline{\faGithub~Project Repo}}}
+    \vspace*{0.05cm}
+    \item Won overall \underline{\nth{1} Prize} of the competetion with my team (3000€).
+    \item Topic: Quantum reservoir computing using only linear optical elements. 
+\end{itemize}}
+
+
+\customcventry{Qiskit Hackathon}{06/2023}{World of Photonics, Munich, Germany}
+{\begin{itemize}
+    \item Topic: Graph theory-based approach to encode highly entangled states on IBM hardware.
+\end{itemize}}
+
+
+\customcventry{ETH Quantum Hackathon}{05/2023}{ETH Zurich, Switzerland}
+{\begin{itemize}
+    \item[] \hspace*{-0.38cm}{\scriptsize \href{https://github.com/PaU1570/eth-qec-hackathon-2023}{\underline{\faGithub~Project Repo}}}
+    \vspace*{0.05cm}
+    \item Won \underline{\nth{2} Prize} of the IQM challenge with my team.
+    \item Topic: Using symmetry-informed quantum machine learning.
+\end{itemize}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% EXTRACURRICULAR %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Extracurricular Activities}
+
+% \customcventry{Student Mentor}{09/2023 -- 02/2024}{ETH Physics Department Student Mentoring}
+% {\begin{itemize}
+%     \item Mentor for a group of seven first-year BSc students. Monthly meetings to discuss the student's progress and problems.
+% \end{itemize}}
+
+% \customcventry{Residence House Speaker}{10/2021 -- 09/2022}{Studentenwerk Munich, Germany}
+% {\begin{itemize}
+%   \item Coordinated administrative tasks for a 300-student residence house.
+%   \item Organized student events; mediated disputes and conflicts; responsible for sensible issues.
+% \end{itemize}}
+
+% \customcventry{Student Mentor}{10/2021}{LMU Physics Department}
+% {\begin{itemize}
+%   \item Mentor 40 new LMU physics students to assist them in commencing their studies in the first months of their studies.
+% \end{itemize}
+% }
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% SKILLS & INTERESTS %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Technical Skills and Interests}
+% TO DO: Python libraries aufzählen
+\textbf{Technical:}
+\begin{itemize}
+\item \underline{Python:} qiskit, pymatching, stim, scikit-learn, CUDA-Q.
+\item \underline{C\texttt{++}:} OpenMP, pybind11, MLPack, eigen, armadillo.
+\item\underline{Other:} Docker, AHK, Latex.
+%\item \underline{AHK}
+%\item \underline{Docker}
+%\item \underline{LaTeX}
+\end{itemize}
+\vspace*{0.1cm}
+\textbf{Languages:} German (native), French (native), English (C1: IELTS 8/9).
+\\
+\textbf{Interests:} Calisthenics, Weightlifting, Volleyball, Chess.
+
+
+
+
+\end{document}
+
+
+
+
+
